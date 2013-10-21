@@ -1,0 +1,14 @@
+ServerSignature Off
+DirectoryIndex index.html
+
+php_flag engine off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_URI} !^/media/.+ [OR]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . / [R]
+</IfModule>
