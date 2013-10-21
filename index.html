@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Mozilla Festival Badges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Claim your MozFest Badges</title>
+    <link rel="stylesheet" id="tabzilla-css" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css">
     <link rel="stylesheet" href="/media/style.css">
   </head>
   <body>
-    <h1>Mozilla Festival Badges</h1>
+    <div id="wrapper">
+      <div id="scene">
+        <div id="buildings">
+          <b class="b1"></b><b class="b2"></b><b class="b3"></b>
+          <b class="b4"></b><b class="b5"></b><b class="b6"></b>
+        </div>
+
+        <div id="eye">
+          <u>
+            <b class="vTop hMid"></b><b class="vTop-ish hRgt-ish"></b><b class="vMid hRgt"></b><b class="vBtm-ish hRgt-ish"></b>
+            <b class="vBtm hMid"></b><b class="vBtm-ish hLft-ish"></b><b class="vMid hLft"></b><b class="vTop-ish hLft-ish"></b>
+          </u>
+          <i></i>
+        </div>
+
+        <div id="clouds">
+          <i></i><b></b><u></u>
+        </div>
+
+        <div id="drive">
+          <div id="road"><i></i></div>
+          <div id="bus"><b></b><a href="#drive" class="on"></a><a href="#" class="off"></a></div>
+        </div>
+
+        <div id="panel">
+          <h1 class="title">You've arrived at MozFest</h1>
+          <p class="strapline"><label for="claim-code">Something something yakety-yak</label></p>
+
+          <form method="get" action="/claim">
+            <label for="claim-code" id="claim-code-label">Enter your claim code</label>
+            <input type="text" name="code" id="claim-code">
+            <button type="submit">Go</button>
+            <script>
+              (function () {
+                // I know, I know... anti-pattern alert. Such is life.
+                var box = document.getElementById('claim-code');
+                var label = document.getElementById('claim-code-label');
+                if ('placeholder' in box) {
+                  box.placeholder = label.innerHTML;
+                  box.setAttribute('aria-label', label.innerHTML);
+                  label.className += " hidden";
+                }
+              })();
+            </script>
+          </form>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <p>
+          <a href="http://www.mozilla.org" id="tabzilla">Mozilla</a>
+          <a href="http://www.openbadges.org" id="about">Open Badges</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
   </body>
 </html>

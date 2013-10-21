@@ -1,0 +1,695 @@
+/* ===[ Animations ]========================================================= */
+
+/* ---[ London Eye ]--------------------------------------------------------- */
+
+@-webkit-keyframes eye {
+  0 { -webkit-transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes eye {
+  0 { -moz-transform: rotate(0); }
+  100% { -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes eye {
+  0 { -o-transform: rotate(0); }
+  100% { -o-transform: rotate(360deg); }
+}
+
+@keyframes eye {
+  0 { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ---[ Driving ]------------------------------------------------------------ */
+
+@-webkit-keyframes drive {
+  0 { -webkit-transform: translateX(0); }
+  25% { -webkit-transform: translateX(2%); }
+  50% { -webkit-transform: translateX(0); }
+  75% { -webkit-transform: translateX(-2%); }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes drive {
+  0 { -moz-transform: translateX(0); }
+  25% { -moz-transform: translateX(2%); }
+  50% { -moz-transform: translateX(0); }
+  75% { -moz-transform: translateX(-2%); }
+  100% { -moz-transform: translateX(0); }
+}
+
+@-o-keyframes drive {
+  0 { -o-transform: translateX(0); }
+  25% { -o-transform: translateX(2%); }
+  50% { -o-transform: translateX(0); }
+  75% { -o-transform: translateX(-2%); }
+  100% { -o-transform: translateX(0); }
+}
+
+@keyframes drive {
+  0 { transform: translateX(0); }
+  25% { transform: translateX(2%); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-2%); }
+  100% { transform: translateX(0); }
+}
+
+@-webkit-keyframes bus {
+  0 { -webkit-transform: rotate(0); }
+  25% { -webkit-transform: rotate(0.5deg); margin-top: -1%; }
+  50% { -webkit-transform: rotate(0); }
+  75% { -webkit-transform: rotate(-0.5deg); margin-bottom: 1%; }
+  100% { -webkit-transform: rotate(0); }
+}
+
+@-moz-keyframes bus {
+  0 { -moz-transform: rotate(0); }
+  25% { -moz-transform: rotate(0.5deg); margin-top: -1%; }
+  50% { -moz-transform: rotate(0); }
+  75% { -moz-transform: rotate(-0.5deg); margin-bottom: 1%; }
+  100% { -moz-transform: rotate(0); }
+}
+
+@-o-keyframes bus {
+  0 { -o-transform: rotate(0); }
+  25% { -o-transform: rotate(0.5deg); margin-top: -1%; }
+  50% { -o-transform: rotate(0); }
+  75% { -o-transform: rotate(-0.5deg); margin-bottom: 1%; }
+  100% { -o-transform: rotate(0); }
+}
+
+@keyframes bus {
+  0 { transform: rotate(0); }
+  25% { transform: rotate(0.5deg); margin-top: -1%; }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(-0.5deg); margin-bottom: 1%; }
+  100% { transform: rotate(0); }
+}
+
+@-webkit-keyframes shadow {
+  50% { -webkit-transform: scale(1.05); }
+}
+
+@-moz-keyframes shadow {
+  50% { -moz-transform: scale(1.05); }
+}
+
+@-o-keyframes shadow {
+  50% { -o-transform: scale(1.05); }
+}
+
+@keyframes shadow {
+  50% { transform: scale(1.05); }
+}
+
+@-webkit-keyframes wheels {
+  50% { margin-top: 0.5%; }
+}
+
+@-moz-keyframes wheels {
+  50% { margin-top: 0.5%; }
+}
+
+@-o-keyframes wheels {
+  50% { margin-top: 0.5%; }
+}
+
+@keyframes wheels {
+  50% { margin-top: 0.5%; }
+}
+
+@-webkit-keyframes road {
+  0 { background-position: 50% 0; }
+  100% { background-position: 50% -200px; }
+}
+
+@-moz-keyframes road {
+  0 { background-position: 50% 0; }
+  100% { background-position: 50% -200px; }
+}
+
+@-o-keyframes road {
+  0 { background-position: 50% 0; }
+  100% { background-position: 50% -200px; }
+}
+
+@keyframes road {
+  0 { background-position: 50% 0; }
+  100% { background-position: 50% -200px; }
+}
+
+/* ---[ Clouds ]------------------------------------------------------------- */
+
+@-webkit-keyframes clouds {
+  0% { left: 125%; }
+  100% { left: -25%; }
+}
+
+@-moz-keyframes clouds {
+  0% { left: 125%; }
+  100% { left: -25%; }
+}
+
+@-o-keyframes clouds {
+  0% { left: 125%; }
+  100% { left: -25%; }
+}
+
+@keyframes clouds {
+  0% { left: 125%; }
+  100% { left: -25%; }
+}
+
+/* ===[ Basics ]============================================================= */
+
+html,
+body {
+  color: #000;
+  background: #E8D170;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 16px;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#wrapper {
+  display: table;
+  width: 100%;
+}
+
+/* ===[ Scene ]============================================================== */
+
+#scene {
+  padding-bottom: 490px;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+/* ---[ Bus ]---------------------------------------------------------------- */
+
+#bus {
+  position: absolute;
+  left: 47%;
+  bottom: 0;
+  width: 347px;
+  height: 417px;
+  margin: 0 0 0 -173.5px;
+}
+
+#bus:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 35px;
+  background: url('images/bus.png') 50% -480px;
+  position: absolute;
+  top: 382px;
+  left: 0;
+}
+
+#bus:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 90px;
+  background: url('images/bus.png') 50% -390px;
+  position: absolute;
+  top: 315px;
+  left: 0;
+}
+
+#bus b {
+  display: block;
+  width: 100%;
+  height: 390px;
+  background: url('images/bus.png') 50% 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* ---[ Panel ]-------------------------------------------------------------- */
+
+#panel {
+  padding: 0 10px 25px;
+  margin: 56px auto 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #5B5656;
+}
+
+#panel h1 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-size: 2em;
+}
+
+#panel p {
+  margin: 0;
+  font-size: 1.65em;
+  text-transform: lowercase;
+}
+
+#panel form {
+  margin: 1.5em auto 0;
+  max-width: 15em;
+  padding-right: 3.5em;
+  position: relative;
+  font-size: 1em;
+}
+
+#panel form label {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  line-height: 2em;
+  padding: 0 0.5em;
+}
+
+#panel form label.hidden {
+  position: absolute;
+  top: -1000%;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#panel input {
+  background: #FFF;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  font: inherit;
+  display: block;
+  width: 100%;
+  height: 1em;
+  border: none;
+  padding: 0.5em 3em 0.5em 0.5em;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  position: relative;
+}
+
+#panel input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 0 #5B5656;
+  box-shadow: 0 0 5px 0 #5B5656;
+  z-index: 1;
+}
+
+#panel button {
+  font: inherit;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 0.25em;
+  width: 2em;
+  height: 1.5em;
+  margin-top: -0.75em;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #FFCC02;
+  text-transform: uppercase;
+  -webkit-border-radius: 0.33em;
+  -moz-border-radius: 0.33em;
+  border-radius: 0.33em;
+  color: #333;
+}
+
+#panel input:focus + button {
+  z-index: 1;
+}
+
+/* ===[ Bits and Pieces ]==================================================== */
+
+#tabzilla-panel {
+  z-index: 1;
+  border-bottom: solid 1px #FFF;
+}
+
+#footer {
+  display: table-header-group;
+}
+
+#footer p {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+#about {
+  position: fixed;
+  bottom: 2em;
+  right: 5em;
+  text-decoration: none;
+  color: #5B5656;
+  z-index: 10;
+  padding: 5px 10px;
+  margin: 0 -10px -5px 0;
+  background: rgba(232,209,112,0.75);
+  border-radius: 10px;
+}
+
+#about:before {
+  content: "About ";
+}
+
+/* ===[ Large Screens ]====================================================== */
+
+@media (min-width: 46em) {
+  #wrapper,
+  #footer {
+    display: block;
+  }
+
+  #scene {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #E8D170;
+    min-height: 775px;
+  }
+
+  #panel {
+    position: absolute;
+    bottom: 500px;
+    left: 0;
+    right: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 46em) and (min-height: 450px) {
+  #eye {
+    position: absolute;
+    bottom: 25%;
+    left: -5%;
+    height: 333px;
+    width: 333px;
+    margin-left: 50px;
+    padding: 0 0 26px;
+  }
+
+  #eye u {
+    display: block;
+    width: 333px;
+    height: 333px;
+    background: url('images/eye.png');
+    position: relative;
+    -webkit-animation: eye infinite linear 180s;
+    -moz-animation: eye infinite linear 180s;
+    -o-animation: eye infinite linear 180s;
+    animation: eye infinite linear 180s;
+  }
+
+  #eye b {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background: url('images/eye.png') 100% 0;
+    position: absolute;
+    margin: -26px 0 0 -26px;
+    -webkit-animation: eye infinite linear 180s reverse;
+    -moz-animation: eye infinite linear 180s reverse;
+    -o-animation: eye infinite linear 180s reverse;
+    animation: eye infinite linear 180s reverse;
+  }
+
+  #eye .vTop { top: 0; }
+  #eye .vTop-ish { top: 15%; }
+  #eye .vMid { top: 50%; }
+  #eye .vBtm-ish { top: 85%; }
+  #eye .vBtm { top: 100%; }
+
+  #eye .hLft { left: 0; }
+  #eye .hLft-ish { left: 15%; }
+  #eye .hMid { left: 50%; }
+  #eye .hRgt-ish { left: 85%; }
+  #eye .hRgt { left: 100%; }
+
+  #eye i {
+    display: block;
+    width: 155px;
+    height: 220px;
+    background: url('../images/eye.png') 100% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -84px;
+  }
+
+  #buildings {
+    position: absolute;
+    top: 0;
+    bottom: 28%;
+    left: 25%;
+    right: 5%;
+  }
+
+  #buildings b {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: url('images/buildings.png');
+  }
+
+  #buildings .b1 {
+    width: 155px;
+    height: 130px;
+    left: 90%;
+    margin-left: -77.5px;
+    background-position: 0 -181px;
+  }
+
+  #buildings .b2 {
+    width: 35px;
+    height: 90px;
+    left: 100%;
+    bottom: -1%;
+    margin-left: -17.5px;
+    background-position: -155px -221px;
+  }
+
+  #buildings .b3 {
+    width: 305px;
+    height: 205px;
+    left: 55%;
+    bottom: 5%;
+    margin-left: -152.5px;
+    background-position: -190px -106px;
+  }
+
+  #buildings .b4 {
+    width: 105px;
+    height: 311px;
+    left: 75%;
+    bottom: 1%;
+    margin-left: -52.5px;
+    background-position: -495px 0;
+  }
+
+  #buildings .b5 {
+    width: 65px;
+    height: 150px;
+    left: 0;
+    bottom: 6%;
+    margin-left: -32.5px;
+    background-position: -600px -161px;
+  }
+
+  #buildings .b6 {
+    width: 55px;
+    height: 311px;
+    left: 10%;
+    bottom: 8%;
+    margin-left: -27.5px;
+    background-position: -665px 0;
+  }
+
+  #clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75%;
+  }
+
+  #clouds i,
+  #clouds b,
+  #clouds u {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    margin: -50px 0 0 -200px;
+    background: url('images/clouds.png') no-repeat;
+    -webkit-animation: clouds infinite linear;
+    -moz-animation: clouds infinite linear;
+    -o-animation: clouds infinite linear;
+    animation: clouds infinite linear;
+  }
+
+  #clouds i {
+    top: 30%;
+    left: 40%;
+    -webkit-animation-duration: 120s;
+    -moz-animation-duration: 120s;
+    -o-animation-duration: 120s;
+    animation-duration: 120s;
+  }
+
+  #clouds b {
+    top: 50%;
+    left: 20%;
+    background-position: 0 -100px;
+    -webkit-animation-duration: 90s;
+    -moz-animation-duration: 90s;
+    -o-animation-duration: 90s;
+    animation-duration: 90s;
+  }
+
+  #clouds u {
+    top: 60%;
+    left: 80%;
+    background-position: 0 -200px;
+    height: 150px;
+    margin-top: -75px;
+    -webkit-animation-duration: 60s;
+    -moz-animation-duration: 60s;
+    -o-animation-duration: 60s;
+    animation-duration: 60s;
+  }
+
+  #road {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 312px;
+    width: 2000px;
+    margin-left: -1000px;
+    background: url('images/road.png') 50% 0 no-repeat;
+  }
+
+  #bus {
+    bottom: 2%;
+  }
+
+  #drive:target #bus {
+    -webkit-animation: drive infinite linear 7.5s;
+    -moz-animation: drive infinite linear 7.5s;
+    -o-animation: drive infinite linear 7.5s;
+    animation: drive infinite linear 7.5s;
+  }
+
+  #drive:target #bus b {
+    -webkit-animation: bus infinite linear 1s;
+    -moz-animation: bus infinite linear 1s;
+    -o-animation: bus infinite linear 1s;
+    animation: bus infinite linear 1s;
+  }
+
+  #drive:target #bus:before {
+    -webkit-animation: shadow infinite linear 1s;
+    -moz-animation: shadow infinite linear 1s;
+    -o-animation: shadow infinite linear 1s;
+    animation: shadow infinite linear 1s;
+  }
+
+  #drive:target #bus:after {
+    -webkit-animation: wheels infinite linear 0.5s;
+    -moz-animation: wheels infinite linear 0.5s;
+    -o-animation: wheels infinite linear 0.5s;
+    animation: wheels infinite linear 0.5s;
+  }
+
+  #about {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* ===[ Smaller Screens ]==================================================== */
+
+@media (max-height: 450px) {
+  #scene {
+    padding: 0;
+    min-height: 0;
+  }
+
+  #bus {
+    display: none;
+  }
+
+  #panel {
+    position: static;
+  }
+}
+
+@media (max-width: 46em) {
+  #panel {
+    font-size: 1.25em;
+  }
+
+  #about {
+    right: 4em;
+  }
+}
+
+@media (max-width: 35em) {
+  #scene {
+    padding-bottom: 435px;
+  }
+
+  #bus {
+    -webkit-transform: scale(0.8);
+  }
+
+  #panel {
+    font-size: 1em;
+  }
+
+  #about {
+    right: 3em;
+  }
+}
+
+@media (max-width: 30em) {
+  #panel {
+    font-size: 0.75em;
+  }
+
+  #panel form {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 30em) and (max-device-height: 500px) {
+  #scene {
+    padding-bottom: 0;
+  }
+
+  #bus {
+    display: none;
+  }
+}
