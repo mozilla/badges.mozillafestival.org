@@ -277,6 +277,7 @@ body {
   z-index: 1;
   line-height: 2em;
   padding: 0 0.5em;
+  cursor: text;
 }
 
 #panel form label.hidden {
