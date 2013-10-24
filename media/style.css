@@ -263,8 +263,8 @@ body {
 
 #panel form {
   margin: 1.5em auto 0;
-  max-width: 15em;
-  padding-right: 3.5em;
+  max-width: 13em;
+  padding-right: 6em;
   position: relative;
   font-size: 1em;
 }
@@ -297,7 +297,7 @@ body {
   width: 100%;
   height: 1em;
   border: none;
-  padding: 0.5em 3em 0.5em 0.5em;
+  padding: 0.5em 5.5em 0.5em 0.5em;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   position: relative;
@@ -316,7 +316,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0.25em;
-  width: 2em;
+  width: 4.5em;
   height: 1.5em;
   margin-top: -0.75em;
   border: none;
