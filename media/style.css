@@ -239,6 +239,10 @@ body {
   z-index: 1;
 }
 
+#bus a {
+  display: none;
+}
+
 /* ---[ Panel ]-------------------------------------------------------------- */
 
 #panel {
@@ -593,6 +597,21 @@ body {
     bottom: 2%;
   }
 
+  #bus a {
+    display: block;
+    position: absolute;
+    top: 160px;
+    left: 103px;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  #bus a.off {
+    display: none;
+  }
+
   #drive:target #bus {
     -webkit-animation: drive infinite linear 7.5s;
     -moz-animation: drive infinite linear 7.5s;
@@ -605,6 +624,14 @@ body {
     -moz-animation: bus infinite linear 1s;
     -o-animation: bus infinite linear 1s;
     animation: bus infinite linear 1s;
+  }
+
+  #drive:target #bus a.on {
+    display: none;
+  }
+
+  #drive:target #bus a.off {
+    display: block;
   }
 
   #drive:target #bus:before {
