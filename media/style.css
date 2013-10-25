@@ -697,6 +697,34 @@ body {
     font-size: 1em;
   }
 
+  #panel form {
+    padding-right: 1em;
+    max-width: 18em;
+    font-size: 1.25em;
+  }
+
+  #panel input {
+    padding-right: 0.5em;
+    text-align: center;
+    margin-left: -1px;
+    border: solid 1px rgba(100,100,100,0.75);
+  }
+
+  #panel button {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0.5em;
+    display: inline-block;
+    height: auto;
+    width: 8em;
+    padding: 0.5em;
+    margin: 0.5em auto 0;
+    background: #77C7D2;
+    color: #FFF;
+    font-weight: bold;
+  }
+
   #about {
     right: 3em;
   }
@@ -705,10 +733,6 @@ body {
 @media (max-width: 30em) {
   #panel {
     font-size: 0.75em;
-  }
-
-  #panel form {
-    font-size: 1.25em;
   }
 }
 
